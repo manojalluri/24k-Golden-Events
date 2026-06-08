@@ -25,7 +25,8 @@ export function MobileCTA() {
           </a>
         ))}
         <Link
-          to="/contact"
+          to="/"
+          hash="contact"
           className="flex flex-col items-center gap-1 bg-gold py-3 text-[0.65rem] uppercase tracking-[0.15em] text-charcoal"
         >
           <CalendarHeart size={18} />

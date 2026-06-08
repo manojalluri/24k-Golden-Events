@@ -25,7 +25,8 @@ export function VirtualTour() {
             <div className="absolute inset-0 bg-charcoal/40" />
             <div className="absolute inset-0 flex items-center justify-center">
               <Link
-                to="/contact"
+                to="/"
+                hash="contact"
                 className="flex size-20 items-center justify-center rounded-full border border-ivory/40 bg-charcoal/40 text-ivory backdrop-blur-md transition-all hover:scale-110 hover:border-gold hover:bg-gold hover:text-charcoal md:size-24"
                 aria-label="Start virtual tour"
               >

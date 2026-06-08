@@ -151,25 +151,27 @@ export function ContactSection() {
                 <Info Icon={Clock} label="Open" value={venue.hours} />
               </ul>
 
-              <a
-                href={mapsLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block aspect-[4/3] overflow-hidden rounded-sm border border-ivory/10"
-              >
-                <img
-                  src={`https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(venue.fullAddress)}&zoom=14&size=600x450&scale=2&style=feature:all|element:geometry|color:0x16140f&style=feature:road|element:geometry|color:0x2a2620&style=feature:water|element:geometry|color:0x0e0d0a&style=feature:all|element:labels.text.fill|color:0xc9a84c`}
-                  alt={`Map showing ${venue.name} location`}
+              <div className="relative block aspect-[4/3] overflow-hidden rounded-sm border border-ivory/10">
+                <iframe
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(venue.name + " " + venue.city)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                  className="absolute inset-0 h-full w-full border-0"
+                  style={{ filter: "grayscale(100%) invert(92%) contrast(83%)" }}
+                  allowFullScreen
                   loading="lazy"
-                  className="h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
-                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5 text-ivory">
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps Location"
+                ></iframe>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent" />
+                <a
+                  href={mapsLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5 text-ivory transition-opacity hover:opacity-80"
+                >
                   <span className="text-xs uppercase tracking-[0.2em]">Open in Maps</span>
                   <ArrowRight size={16} className="text-gold" />
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>

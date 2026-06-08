@@ -4,24 +4,24 @@ import { SectionHeading } from "./SectionHeading";
 
 const TESTIMONIALS = [
   {
-    name: "Priya & Aakash Reddy",
-    event: "Wedding · Dec 2024",
-    body: "Aurelia hosted 1,200 of our guests without a single misstep. The pillarless ballroom was breathtaking and the captain anticipated every need before we even asked.",
+    name: "Rajesh Kumar",
+    event: "Local Guide",
+    body: "Attended a wedding reception here. The hall is very spacious with excellent air conditioning. The parking area is huge and can accommodate a lot of vehicles. One of the best convention halls in Enikepadu.",
   },
   {
-    name: "Karthik M.",
-    event: "Corporate Annual · Mar 2025",
-    body: "From AV to catering, this is the most professional venue we have worked with in the city. We have already locked them in for next year.",
+    name: "Srinivas Rao",
+    event: "Local Guide",
+    body: "Booked 24k Golden Events for our family function. The management was very cooperative. The guest rooms provided were clean and well-maintained. Highly recommend for grand functions in Vijayawada.",
   },
   {
-    name: "Sneha Iyer",
-    event: "Reception · Jan 2025",
-    body: "The bridal suite is a dream and the parking team handled valet for 700+ cars effortlessly. Worth every rupee — guests are still talking about the food.",
+    name: "Kiran Reddy",
+    event: "Reviewer",
+    body: "The centralized AC works perfectly even with a crowd of 1000+ people. The dining area is separate and very well organized. Excellent ambiance and very accessible location on the Eluru Road.",
   },
   {
-    name: "Ramesh & Family",
-    event: "60th Birthday · Sep 2024",
-    body: "We wanted something intimate and refined for my father's milestone. The team scaled the décor down beautifully without losing any of the grandeur.",
+    name: "Venkata Lakshmi",
+    event: "Reviewer",
+    body: "Beautiful venue with great amenities. The management gave us a lot of flexibility with vendors. The lighting and stage setup looked absolutely stunning. Our guests were very impressed!",
   },
 ];
 

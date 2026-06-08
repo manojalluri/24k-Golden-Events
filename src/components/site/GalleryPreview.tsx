@@ -23,7 +23,7 @@ const IMAGES = [
 
 export function GalleryPreview() {
   return (
-    <section className="border-t border-ivory/10 py-24 md:py-32">
+    <section id="gallery" className="border-t border-ivory/10 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Gallery"

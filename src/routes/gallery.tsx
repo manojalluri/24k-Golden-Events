@@ -55,7 +55,7 @@ function GalleryPage() {
           <Reveal>
             <div className="eyebrow">Gallery</div>
             <h1 className="mt-4 max-w-4xl font-serif text-5xl text-balance text-ivory md:text-7xl">
-              Moments captured at <span className="italic text-gold">Aurelia Grand.</span>
+              Moments captured at <span className="italic text-gold">24k Golden Events.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
               A curated selection from celebrations across our halls and lawns.
@@ -111,7 +111,8 @@ function GalleryPage() {
 
           <div className="mt-16 text-center">
             <Link
-              to="/contact"
+              to="/"
+              hash="contact"
               className="inline-flex items-center gap-3 rounded-sm bg-gold px-7 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-gold-soft"
             >
               Book a Private Tour

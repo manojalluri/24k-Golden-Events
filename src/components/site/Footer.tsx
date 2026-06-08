@@ -43,9 +43,9 @@ export function Footer() {
           <div className="eyebrow mb-4">Explore</div>
           <ul className="space-y-3 text-sm text-ivory/80">
             <li><Link to="/" className="hover:text-gold">Home</Link></li>
-            <li><Link to="/gallery" className="hover:text-gold">Gallery</Link></li>
-            <li><Link to="/packages" className="hover:text-gold">Packages</Link></li>
-            <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
+            <li><Link to="/" hash="gallery" className="hover:text-gold">Gallery</Link></li>
+            <li><Link to="/" hash="packages" className="hover:text-gold">Packages</Link></li>
+            <li><Link to="/" hash="contact" className="hover:text-gold">Contact</Link></li>
             <li><a href={waLink()} className="hover:text-gold">WhatsApp Enquiry</a></li>
           </ul>
         </div>

@@ -1,15 +1,15 @@
 // Single source of truth for venue details. Update these placeholders to brand the site.
 export const venue = {
-  name: "Aurelia Grand",
-  tagline: "Convention & Banquet",
-  city: "Hyderabad",
-  fullAddress: "Plot 24, Jubilee Hills Road No. 36, Hyderabad, Telangana 500033",
-  phoneDisplay: "+91 98XXX XXXXX",
-  phoneHref: "+919800000000",
-  whatsappHref: "919800000000",
-  email: "hello@aureliagrand.com",
+  name: "24k Golden Events",
+  tagline: "Convention Hall",
+  city: "Vijayawada",
+  fullAddress: "National Highway 16, Eluru Road, Enikepadu, Vijayawada, Andhra Pradesh 521108",
+  phoneDisplay: "+91 99486 11116",
+  phoneHref: "+919948611116",
+  whatsappHref: "919948611116",
+  email: "hello@24kgoldenevents.com",
   hours: "Mon – Sun · 9:00 AM – 9:00 PM",
-  mapsQuery: "Aurelia+Grand+Convention+Hyderabad",
+  mapsQuery: "24k+Golden+Events+Convention+Hall+Vijayawada",
   social: {
     instagram: "https://instagram.com/",
     facebook: "https://facebook.com/",
@@ -27,4 +27,4 @@ export const waLink = (msg = "Hello, I'd like to enquire about booking the venue
   `https://wa.me/${venue.whatsappHref}?text=${encodeURIComponent(msg)}`;
 
 export const mapsLink = () =>
-  `https://www.google.com/maps/search/?api=1&query=${venue.mapsQuery}`;
+  `https://maps.app.goo.gl/nEZjXUpgVbGeVs2Y7?g_st=ic`;

@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { venue } from "@/lib/venue";
 
 const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/packages", label: "Packages" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", hash: "", label: "Home" },
+  { to: "/", hash: "gallery", label: "Gallery" },
+  { to: "/", hash: "packages", label: "Packages" },
+  { to: "/", hash: "contact", label: "Contact" },
 ] as const;
 
 export function Header() {
@@ -43,17 +43,19 @@ export function Header() {
         <nav className="hidden items-center gap-10 md:flex">
           {NAV.map((n) => (
             <Link
-              key={n.to}
+              key={n.label}
               to={n.to}
+              hash={n.hash || undefined}
               className="text-sm font-medium text-ivory/80 transition-colors hover:text-gold"
               activeProps={{ className: "text-gold" }}
-              activeOptions={{ exact: n.to === "/" }}
+              activeOptions={{ exact: n.to === "/" && !n.hash }}
             >
               {n.label}
             </Link>
           ))}
           <Link
-            to="/contact"
+            to="/"
+            hash="contact"
             className="rounded-sm border border-gold/60 bg-transparent px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-gold transition-all hover:bg-gold hover:text-charcoal"
           >
             Book Venue
@@ -74,8 +76,9 @@ export function Header() {
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-6">
             {NAV.map((n) => (
               <Link
-                key={n.to}
+                key={n.label}
                 to={n.to}
+                hash={n.hash || undefined}
                 onClick={() => setOpen(false)}
                 className="border-b border-ivory/5 py-4 font-serif text-2xl text-ivory"
               >
@@ -83,7 +86,8 @@ export function Header() {
               </Link>
             ))}
             <Link
-              to="/contact"
+              to="/"
+              hash="contact"
               onClick={() => setOpen(false)}
               className="mt-6 rounded-sm border border-gold bg-gold px-5 py-3 text-center text-xs uppercase tracking-[0.2em] text-charcoal"
             >

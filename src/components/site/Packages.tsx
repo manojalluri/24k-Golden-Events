@@ -54,7 +54,7 @@ export const PACKAGES = [
 
 export function PackagesPreview() {
   return (
-    <section className="border-t border-ivory/10 py-24 md:py-32">
+    <section id="packages" className="border-t border-ivory/10 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Packages"
@@ -93,7 +93,8 @@ export function PackagesPreview() {
                 ))}
               </ul>
               <Link
-                to="/contact"
+                to="/"
+                hash="contact"
                 className={
                   "mt-8 inline-flex items-center justify-center rounded-sm px-6 py-3.5 text-xs uppercase tracking-[0.2em] transition-all " +
                   (p.featured

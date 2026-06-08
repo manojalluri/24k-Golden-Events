@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Grand wedding stage with floral arch and crystal chandeliers at Aurelia Grand"
+          alt="Grand wedding stage with floral arch and crystal chandeliers at 24k Golden Events"
           width={1920}
           height={1280}
           className="h-full w-full object-cover animate-kenburns"
@@ -68,7 +68,8 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center gap-3"
         >
           <Link
-            to="/contact"
+            to="/"
+            hash="contact"
             className="group inline-flex items-center gap-3 rounded-sm bg-gold px-7 py-4 text-xs uppercase tracking-[0.22em] text-charcoal transition-all hover:bg-gold-soft"
           >
             Book the Venue
