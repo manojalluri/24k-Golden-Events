@@ -33,12 +33,12 @@ export function Testimonials() {
           eyebrow="Testimonials"
           title={<>Beloved by the families <span className="italic text-gold">we serve.</span></>}
         />
-        <div className="mt-16 grid gap-5 md:grid-cols-2">
+        <div className="mt-16 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {TESTIMONIALS.map((t, i) => (
             <Reveal
               key={t.name}
               delay={i * 0.08}
-              className="relative flex h-full flex-col gap-5 rounded-sm border border-ivory/10 bg-card/60 p-8 backdrop-blur md:p-10"
+              className="relative flex h-full w-[85vw] max-w-[480px] shrink-0 snap-center flex-col gap-5 rounded-sm border border-ivory/10 bg-card/60 p-8 backdrop-blur md:p-10"
             >
               <Quote className="size-8 text-gold/60" strokeWidth={1} />
               <p className="font-serif text-xl leading-snug text-ivory md:text-2xl">

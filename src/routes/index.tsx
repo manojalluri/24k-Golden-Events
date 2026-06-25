@@ -7,7 +7,7 @@ import { Amenities } from "@/components/site/Amenities";
 import { GalleryPreview } from "@/components/site/GalleryPreview";
 import { Testimonials } from "@/components/site/Testimonials";
 import { VirtualTour } from "@/components/site/VirtualTour";
-import { PackagesPreview } from "@/components/site/Packages";
+
 import { FAQ_ } from "@/components/site/FAQ";
 import { ContactSection } from "@/components/site/ContactSection";
 import { venue } from "@/lib/venue";
@@ -40,7 +40,7 @@ function Index() {
       <GalleryPreview />
       <Testimonials />
       <VirtualTour />
-      <PackagesPreview />
+
       <FAQ_ />
       <ContactSection />
     </>

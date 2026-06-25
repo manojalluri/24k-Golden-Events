@@ -2,29 +2,28 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { venue } from "@/lib/venue";
-import g1 from "@/assets/hero-stage.jpg";
-import g2 from "@/assets/banquet-interior.jpg";
-import g3 from "@/assets/reception-dining.jpg";
-import g4 from "@/assets/engagement-stage.jpg";
-import g5 from "@/assets/detail-centerpiece.jpg";
-import g6 from "@/assets/detail-chandelier.jpg";
-import g7 from "@/assets/bridal-suite.jpg";
-import g8 from "@/assets/exterior-night.jpg";
-import g9 from "@/assets/corporate-setup.jpg";
-import g10 from "@/assets/birthday-decor.jpg";
+
 
 type Cat = "All" | "Weddings" | "Receptions" | "Corporate" | "Décor" | "Architecture";
 const ITEMS: { src: string; alt: string; cat: Exclude<Cat, "All">; tall?: boolean }[] = [
-  { src: g1, alt: "Wedding stage with floral arch", cat: "Weddings", tall: true },
-  { src: g2, alt: "Marble ballroom with chandeliers", cat: "Architecture" },
-  { src: g3, alt: "Candlelit reception dining", cat: "Receptions" },
-  { src: g4, alt: "Engagement ceremony stage", cat: "Weddings" },
-  { src: g5, alt: "Floral centerpiece detail", cat: "Décor", tall: true },
-  { src: g6, alt: "Crystal chandelier", cat: "Architecture" },
-  { src: g7, alt: "Bridal suite interior", cat: "Décor" },
-  { src: g8, alt: "Convention hall exterior at night", cat: "Architecture", tall: true },
-  { src: g9, alt: "Corporate conference setup", cat: "Corporate" },
-  { src: g10, alt: "Birthday party décor", cat: "Décor" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144233.png", alt: "Gallery Image 1", cat: "Weddings", tall: true },
+  { src: "/assets/drive/Screenshot 2026-06-25 144421.png", alt: "Gallery Image 2", cat: "Receptions" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144505.png", alt: "Gallery Image 3", cat: "Corporate" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144548.png", alt: "Gallery Image 4", cat: "Décor" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144705.png", alt: "Gallery Image 5", cat: "Architecture", tall: true },
+  { src: "/assets/drive/Screenshot 2026-06-25 144751.png", alt: "Gallery Image 6", cat: "Weddings" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144850.png", alt: "Gallery Image 7", cat: "Receptions" },
+  { src: "/assets/drive/Screenshot 2026-06-25 145156.png", alt: "Gallery Image 8", cat: "Corporate", tall: true },
+  { src: "/assets/drive/Screenshot 2026-06-25 145312.png", alt: "Gallery Image 9", cat: "Décor" },
+  { src: "/assets/drive/Screenshot 2026-06-25 145352.png", alt: "Gallery Image 10", cat: "Architecture" },
+  { src: "/assets/drive/Screenshot 2026-06-25 145519.png", alt: "Gallery Image 11", cat: "Weddings" },
+  { src: "/assets/drive/Screenshot 2026-06-25 145802.png", alt: "Gallery Image 12", cat: "Receptions", tall: true },
+  { src: "/assets/drive/Screenshot 2026-06-25 145848.png", alt: "Gallery Image 13", cat: "Corporate" },
+  { src: "/assets/drive/Screenshot 2026-06-25 150228.png", alt: "Gallery Image 14", cat: "Décor" },
+  { src: "/assets/drive/Screenshot 2026-06-25 150243.png", alt: "Gallery Image 15", cat: "Architecture" },
+  { src: "/assets/drive/Screenshot 2026-06-25 150323.png", alt: "Gallery Image 16", cat: "Weddings" },
+  { src: "/assets/drive/Screenshot 2026-06-25 150421.png", alt: "Gallery Image 17", cat: "Receptions" },
+  { src: "/assets/drive/Screenshot 2026-06-25 150518.png", alt: "Gallery Image 18", cat: "Corporate" },
 ];
 
 export const Route = createFileRoute("/gallery")({
@@ -43,10 +42,7 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function GalleryPage() {
-  const [cat, setCat] = useState<Cat>("All");
   const [lightbox, setLightbox] = useState<string | null>(null);
-  const cats: Cat[] = ["All", "Weddings", "Receptions", "Corporate", "Décor", "Architecture"];
-  const filtered = cat === "All" ? ITEMS : ITEMS.filter((i) => i.cat === cat);
 
   return (
     <>
@@ -62,29 +58,14 @@ function GalleryPage() {
             </p>
           </Reveal>
 
-          <div className="mt-12 flex flex-wrap gap-2 overflow-x-auto">
-            {cats.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCat(c)}
-                className={
-                  "rounded-sm border px-4 py-2 text-xs uppercase tracking-[0.18em] transition-all " +
-                  (cat === c
-                    ? "border-gold bg-gold text-charcoal"
-                    : "border-ivory/15 text-ivory/70 hover:border-gold hover:text-gold")
-                }
-              >
-                {c}
-              </button>
-            ))}
-          </div>
+
         </div>
       </section>
 
       <section className="px-5 pb-32 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid auto-rows-[180px] grid-cols-2 gap-3 md:auto-rows-[240px] md:grid-cols-4">
-            {filtered.map((img, i) => (
+            {ITEMS.map((img, i) => (
               <Reveal
                 key={img.src + i}
                 delay={(i % 4) * 0.05}
@@ -101,9 +82,7 @@ function GalleryPage() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 to-transparent p-4">
-                    <div className="text-[0.65rem] uppercase tracking-[0.2em] text-gold">{img.cat}</div>
-                  </div>
+
                 </button>
               </Reveal>
             ))}

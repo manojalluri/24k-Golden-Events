@@ -8,7 +8,7 @@ const FAQ = [
   { q: "What is the maximum seating capacity?", a: "Our pillarless ballroom seats 1,500 guests dining-style and 1,800 in theatre arrangement. Smaller halls scale beautifully for 200-guest gatherings." },
   { q: "Is outside catering allowed?", a: "We offer in-house catering by award-winning chefs and also welcome empanelled outside caterers for traditional and community-specific menus." },
   { q: "Do you provide decoration services?", a: "Yes. Our in-house design team handles floral, drapery and stage setups, and we happily collaborate with your chosen decorator." },
-  { q: "Is parking available?", a: "Attended valet parking for 350+ vehicles is included with every booking, with covered drop-off and dedicated VIP bays." },
+  { q: "Is parking available?", a: "Attended valet parking for 250 vehicles is included with every booking, with covered drop-off and dedicated VIP bays." },
   { q: "Can we schedule a venue visit?", a: "Absolutely. Visits are by appointment, seven days a week. Use the form below or WhatsApp us — we'll send a senior consultant." },
   { q: "What are the booking terms?", a: "Dates are confirmed with a refundable booking advance. Full breakdown of inclusions, taxes and timelines is shared in your customised quote." },
   { q: "Is generator backup available?", a: "Yes — 100% silent power backup covers the entire venue including AV, climate control and lighting." },

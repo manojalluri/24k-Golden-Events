@@ -1,24 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import g1 from "@/assets/hero-stage.jpg";
-import g2 from "@/assets/banquet-interior.jpg";
-import g3 from "@/assets/reception-dining.jpg";
-import g4 from "@/assets/engagement-stage.jpg";
-import g5 from "@/assets/detail-centerpiece.jpg";
-import g6 from "@/assets/detail-chandelier.jpg";
-import g7 from "@/assets/bridal-suite.jpg";
-import g8 from "@/assets/exterior-night.jpg";
+
 
 const IMAGES = [
-  { src: g1, alt: "Wedding stage with floral arch", span: "row-span-2" },
-  { src: g2, alt: "Marble ballroom with chandeliers" },
-  { src: g3, alt: "Candlelit reception dining" },
-  { src: g4, alt: "Engagement ceremony stage" },
-  { src: g5, alt: "Centerpiece floral detail", span: "row-span-2" },
-  { src: g6, alt: "Crystal chandelier detail" },
-  { src: g7, alt: "Bridal suite with gilded mirror" },
-  { src: g8, alt: "Convention hall exterior at night" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144233.png", alt: "Gallery Image 1", span: "row-span-2" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144421.png", alt: "Gallery Image 2" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144505.png", alt: "Gallery Image 3" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144548.png", alt: "Gallery Image 4" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144705.png", alt: "Gallery Image 5", span: "row-span-2" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144751.png", alt: "Gallery Image 6" },
+  { src: "/assets/drive/Screenshot 2026-06-25 144850.png", alt: "Gallery Image 7" },
+  { src: "/assets/drive/Screenshot 2026-06-25 145156.png", alt: "Gallery Image 8" },
 ];
 
 export function GalleryPreview() {

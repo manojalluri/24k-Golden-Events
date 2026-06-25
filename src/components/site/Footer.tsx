@@ -44,7 +44,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-ivory/80">
             <li><Link to="/" className="hover:text-gold">Home</Link></li>
             <li><Link to="/" hash="gallery" className="hover:text-gold">Gallery</Link></li>
-            <li><Link to="/" hash="packages" className="hover:text-gold">Packages</Link></li>
+
             <li><Link to="/" hash="contact" className="hover:text-gold">Contact</Link></li>
             <li><a href={waLink()} className="hover:text-gold">WhatsApp Enquiry</a></li>
           </ul>
@@ -55,7 +55,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-ivory/80">
             <li className="flex items-start gap-3">
               <Phone size={14} className="mt-1 text-gold" />
-              <a href={`tel:${venue.phoneHref}`}>{venue.phoneDisplay}</a>
+              <a href={`tel:${venue.phoneHref}`} className="whitespace-pre-wrap">{venue.phoneDisplay}</a>
             </li>
             <li className="flex items-start gap-3">
               <Mail size={14} className="mt-1 text-gold" />

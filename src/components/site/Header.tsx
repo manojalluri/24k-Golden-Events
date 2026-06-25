@@ -6,7 +6,7 @@ import { venue } from "@/lib/venue";
 const NAV = [
   { to: "/", hash: "", label: "Home" },
   { to: "/", hash: "gallery", label: "Gallery" },
-  { to: "/", hash: "packages", label: "Packages" },
+
   { to: "/", hash: "contact", label: "Contact" },
 ] as const;
 

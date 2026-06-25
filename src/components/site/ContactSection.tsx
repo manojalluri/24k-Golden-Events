@@ -200,7 +200,7 @@ function Info({
       <Icon className="mt-0.5 size-4 shrink-0 text-gold" strokeWidth={1.5} />
       <div>
         <div className="text-[0.65rem] uppercase tracking-[0.18em] text-ivory/60">{label}</div>
-        <div className="mt-0.5 text-sm text-ivory">{value}</div>
+        <div className="mt-0.5 text-sm text-ivory whitespace-pre-wrap">{value}</div>
       </div>
     </div>
   );
