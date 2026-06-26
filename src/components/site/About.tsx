@@ -1,7 +1,5 @@
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import bridal from "@/assets/bridal-suite.jpg";
-import detail from "@/assets/detail-centerpiece.jpg";
 
 export function About() {
   return (
@@ -10,26 +8,12 @@ export function About() {
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="relative">
             <Reveal>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="relative overflow-hidden rounded-sm">
                 <img
-                  src={bridal}
-                  alt="Ornate bridal suite with gilded mirror"
+                  src="/assets/drive/image.png"
+                  alt="About Grand Occasions"
                   loading="lazy"
-                  width={1200}
-                  height={1500}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="absolute -bottom-10 -right-4 hidden aspect-[4/5] w-40 overflow-hidden rounded-sm border-4 border-charcoal shadow-luxe md:block md:w-56">
-                <img
-                  src={detail}
-                  alt="Wedding centerpiece detail"
-                  loading="lazy"
-                  width={600}
-                  height={750}
-                  className="h-full w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </div>
             </Reveal>
