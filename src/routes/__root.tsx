@@ -13,6 +13,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
 import { venue } from "@/lib/venue";
+import { HostingLockScreen } from "@/components/HostingLockScreen";
 
 function NotFoundComponent() {
   return (
@@ -148,6 +149,7 @@ function RootComponent() {
         </main>
         <Footer />
         <MobileCTA />
+        <HostingLockScreen />
       </div>
     </QueryClientProvider>
   );
