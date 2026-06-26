@@ -19,13 +19,16 @@ export function VirtualTour() {
           <div className="group relative aspect-[16/10] rounded-xl border border-gold/20 bg-card/50 p-2 shadow-2xl shadow-black/50 backdrop-blur-sm md:aspect-[21/9] md:p-3">
             <div className="relative h-full w-full overflow-hidden rounded-lg border border-ivory/10">
               <video
-                src="/assets/drive/24k Convention hall.mp4"
+                src="/assets/drive/24k%20Convention%20hall.mp4"
                 autoPlay
                 loop
-                muted={!showControls}
+                muted
                 playsInline
                 controls={showControls}
-                onClick={() => setShowControls(true)}
+                onClick={(e) => {
+                  setShowControls(true);
+                  e.currentTarget.muted = false;
+                }}
                 className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105 cursor-pointer"
               />
             </div>
